@@ -1,7 +1,7 @@
 import sqlite3
 import os
 import time
-dbPath = str(os.path.dirname(__file__))
+dbPath = os.getcwd()
 dbPath = dbPath+"/database/database.db"
 conn = sqlite3.connect(dbPath)
 while(True):
