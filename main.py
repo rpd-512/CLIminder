@@ -3,7 +3,7 @@ import os
 import datetime
 from texttable import Texttable
 from time import sleep
-dbPath = os.getcwd()
+dbPath = "" #location of file
 try:
     os.mkdir(dbPath+"/database")
 except:
@@ -340,9 +340,9 @@ def show_all():
             dly = str(dly)+" minutes"
         else:
             dly = "-"
-        if(row[10] == 1 and rpt == "-" and dly == 0):
+        if(row[10] == 1 and rpt == "-" and dly == "-"):
             ocr = "Yes"
-        elif(row[10] == 0 and rpt == "-" and dly == 0):
+        elif(row[10] == 0 and rpt == "-" and dly == "-"):
             ocr = "No"
         t.add_row([id,desc,time,rpt,date,dly,ocr])
     print(t.draw())
