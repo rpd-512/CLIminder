@@ -3,7 +3,7 @@ import sqlite3
 from notifypy import Notify #if not available, install with "pip3 install notify-py"
 from time import sleep
 from datetime import datetime, date, timedelta
-loc = str(os.path.dirname(__file__))
+loc = os.getcwd()
 dbPath = loc+"/database/database.db"
 conn = sqlite3.connect(dbPath)
 
