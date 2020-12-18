@@ -3,7 +3,7 @@ import os
 import datetime
 from texttable import Texttable
 from time import sleep
-dbPath = str(os.path.dirname(__file__))
+dbPath = os.getcwd()
 try:
     os.mkdir(dbPath+"/database")
 except:
